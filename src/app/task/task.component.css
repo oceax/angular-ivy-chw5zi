@@ -1,0 +1,17 @@
+.task {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 1em;
+}
+
+span {
+  flex: 1;
+}
+
+button {
+  margin-left: 1em;
+}
+
+.completed {
+  text-decoration: line-through;
+}

@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
+  text: string;
 
-  constructor() { }
+  @Output() addTask: EventEmitter<string> = new EventEmitter();
 
-  ngOnInit() {
+  agregarTarea() {
+    this.addTask.emit(this.text);
+    this.text = '';
   }
-
 }

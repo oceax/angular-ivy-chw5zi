@@ -1,2 +1,8 @@
 <app-header></app-header>
-<app-form></app-form>
+<app-form (addTask)="agregarTarea($event)"></app-form>
+<app-task
+  *ngFor="let task of taskList"
+  [id]="task.id"
+  [text]="task.text"
+  (delete)="eliminarTarea($event)"
+></app-task>

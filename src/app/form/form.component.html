@@ -1,4 +1,10 @@
 <div class="form">
-  <input type="text" name="tarea" id="tarea" placeholder="Ingresa una tarea" />
-  <button>Agregar Tarea</button>
+  <input
+    type="text"
+    name="tarea"
+    id="tarea"
+    [(ngModel)]="text"
+    placeholder="Ingresa una tarea"
+  />
+  <button (click)="agregarTarea()">Agregar Tarea</button>
 </div>
